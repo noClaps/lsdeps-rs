@@ -1,4 +1,4 @@
-# lsdeps-rs
+# lsdeps
 
 This is a CLI tool to show the total number of dependencies that any package has on the npm registry. This includes both direct dependencies, as well as indirect dependencies (dependencies of dependencies, for example).
 
