@@ -1,8 +1,15 @@
+use clap::Parser;
 use serde::Deserialize;
 use std::collections::HashMap;
-use std::env;
 
-#[derive(Deserialize)]
+#[derive(Parser, Debug)]
+#[command(version, about)]
+struct Args {
+    /// The npm package for which to view dependencies.
+    package: String,
+}
+
+#[derive(Deserialize, Debug)]
 #[allow(non_snake_case)]
 struct Package {
     dependencies: Option<HashMap<String, String>>,
@@ -48,8 +55,8 @@ fn get_deps(package_name: String) -> Result<Vec<String>, ureq::Error> {
 }
 
 fn main() -> Result<(), ureq::Error> {
-    let args: Vec<String> = env::args().collect();
-    let package_name = args[1].to_string();
+    let args = Args::parse();
+    let package_name = args.package;
     println!("Counting dependencies...");
 
     let mut pkg_deps = get_deps(package_name.to_string())?;

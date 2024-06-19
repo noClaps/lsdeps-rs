@@ -1,8 +1,10 @@
 [package]
 name = "lsdeps"
-version = "0.1.1"
+description = "A CLI tool to show the total number of dependencies that any package has on the npm registry."
+version = "0.1.2"
 edition = "2021"
 
 [dependencies]
+clap = { version = "4.5.7", features = ["derive"] }
 serde = { version = "1.0.203", features = ["derive"] }
 ureq = { version = "2.9.7", features = ["json"] }
