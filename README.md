@@ -7,8 +7,8 @@ This is a CLI tool to show the total number of dependencies that any package has
 1. Clone the repository
 
    ```sh
-   git clone https://github.com/noClaps/lsdeps-rs.git
-   cd lsdeps-rs
+   git clone https://github.com/noClaps/lsdeps.git
+   cd lsdeps
    ```
 
 2. Run the project.
