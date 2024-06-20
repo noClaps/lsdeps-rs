@@ -11,18 +11,13 @@ This is a CLI tool to show the total number of dependencies that any package has
    cd lsdeps
    ```
 
-2. Run the project.
-
+2. Install the tool.
    ```sh
-   cargo run -- astro # You can give it a package name as a command line argument.
-   ```
-
-3. (Optional) Compile the script to a binary.
-   ```sh
-   cargo build
    cargo install --path .
    lsdeps astro
    ```
+
+You can use `lsdeps --help` to see the full command line usage.
 
 ## Motivation
 
